@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="jG0-NA-4Ou">
+            <objects>
+                <viewController id="5pm-Gw-Z4y" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CLE-cg-380"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ga8-OQ-LYX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mF5-iQ-J1V">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="rZu-CD-hoW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4m-Ya-mYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="516"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="E8Z-4X-MEk">
+            <objects>
+                <viewController id="mrZ-6f-meC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EfU-62-FG8"/>
+                        <viewControllerLayoutGuide type="bottom" id="gLA-0D-HSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5zU-iv-pSm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="grE-uL-4j2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDE-UF-7La" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="-219"/>
+        </scene>
+        <!--Qmian-->
+        <scene sceneID="Iej-pN-NSM">
+            <objects>
+                <tabBarController id="dZu-IQ-EYX" customClass="HYKQQmian" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="L2M-qq-Mfg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mrZ-6f-meC" kind="relationship" relationship="viewControllers" id="LfM-QM-90g"/>
+                        <segue destination="5pm-Gw-Z4y" kind="relationship" relationship="viewControllers" id="eWf-2q-23A"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRJ-CI-dJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="126"/>
+        </scene>
+        <!--请绘制解锁密码-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ci-zM-BXo" customClass="HYKLocker">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="WKO-o2-O59"/>
+                                    <constraint firstAttribute="width" constant="300" id="zDU-lO-3Zf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ci-zM-BXo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SvW-ZT-pht"/>
+                            <constraint firstItem="4ci-zM-BXo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VJC-SV-qg3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="请绘制解锁密码" id="XZ5-hM-C99"/>
+                    <connections>
+                        <outlet property="locker" destination="4ci-zM-BXo" id="mKz-Fh-WAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="126"/>
+        </scene>
+    </scenes>
+</document>
